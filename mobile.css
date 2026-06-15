@@ -2,11 +2,34 @@
 
 @media screen and (max-width: 800px) {
 
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
     body {
+        width: 100%;
         overflow-x: hidden;
     }
 
+    body {
+        display: block;
+    }
+
+    header,
+    nav,
+    main,
+    section,
+    aside,
+    footer {
+        position: static;
+        width: 100%;
+    }
+
+    /* Header */
+
     .site-header {
+        display: flex;
         flex-direction: column;
         gap: 20px;
         padding: 20px;
@@ -15,6 +38,7 @@
 
     .logo {
         justify-content: center;
+        width: 100%;
     }
 
     .logo h2 {
@@ -22,14 +46,21 @@
     }
 
     .logo p {
-        font-size: 10px;
+        font-size: 9px;
         letter-spacing: 2px;
+        white-space: normal;
+    }
+
+    nav {
+        width: 100%;
     }
 
     nav ul {
+        display: flex;
         flex-direction: column;
-        gap: 18px;
+        gap: 15px;
         text-align: center;
+        width: 100%;
     }
 
     nav ul li a {
@@ -40,17 +71,29 @@
         display: none;
     }
 
+    .showNav {
+        display: none;
+    }
+
     /* Homepage */
 
     .hero-section {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         padding: 40px 6%;
         text-align: center;
         gap: 35px;
     }
 
     .hero-content {
+        width: 100%;
         max-width: 100%;
+        order: 1;
+    }
+
+    .hero-image {
+        width: 100%;
+        order: 2;
     }
 
     .intro-text {
@@ -63,12 +106,13 @@
     }
 
     .hero-content h1 {
-        font-size: 48px;
+        font-size: 46px;
         line-height: 1.1;
+        word-break: break-word;
     }
 
     .hero-content h3 {
-        font-size: 17px;
+        font-size: 16px;
         letter-spacing: 2px;
     }
 
@@ -78,7 +122,7 @@
     }
 
     .skill-tags span {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .hero-description {
@@ -101,7 +145,8 @@
     }
 
     .image-card {
-        max-width: 360px;
+        max-width: 340px;
+        margin: 0 auto;
     }
 
     .security-badge {
@@ -119,8 +164,10 @@
     }
 
     .focus-section {
+        display: grid;
         grid-template-columns: 1fr;
         padding: 30px 6%;
+        gap: 18px;
     }
 
     .focus-card {
@@ -148,7 +195,9 @@
     }
 
     .projects-grid {
+        display: grid;
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .project-card {
@@ -164,7 +213,9 @@
     }
 
     .experience-grid {
+        display: grid;
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .experience-card {
@@ -173,7 +224,9 @@
     }
 
     .education-skills-section {
+        display: grid;
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .info-card {
@@ -188,7 +241,9 @@
     }
 
     .contact-container {
+        display: grid;
         grid-template-columns: 1fr;
+        gap: 25px;
     }
 
     .contact-info-card,
@@ -217,7 +272,9 @@
     }
 
     .about-grid {
+        display: grid;
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .about-large {
