@@ -1,0 +1,47 @@
+/* Desktop layout fix */
+
+@media screen and (min-width: 800px) {
+
+    body {
+        display: block;
+    }
+
+    header,
+    nav,
+    main,
+    aside,
+    footer,
+    section {
+        position: static;
+    }
+
+    .site-header {
+        width: 100%;
+        min-height: 90px;
+        padding: 20px 6%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero-section {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 60px;
+        padding: 70px 6% 40px;
+    }
+
+    .focus-section {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 18px;
+        padding: 30px 6% 40px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
